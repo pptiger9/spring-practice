@@ -1,5 +1,7 @@
 package club.yuanzhongwei.service;
 
+import club.yuanzhongwei.dto.User;
+
 /**
  * @Author yuanzhongwei
  * @Date 2021/3/18 14:17
@@ -7,4 +9,5 @@ package club.yuanzhongwei.service;
  * @Description
  */
 public interface UserService {
+    User getUserByUserName(String username);
 }

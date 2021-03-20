@@ -1,5 +1,9 @@
 package club.yuanzhongwei.dto;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +22,12 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@TableName("user")
 public class User implements Serializable {
+    @TableId
+    Integer id;
+    @TableField("username")
     String username;
+    @TableField("password")
     String password;
 }
